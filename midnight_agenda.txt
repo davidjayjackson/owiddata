@@ -1,0 +1,18 @@
+
+
+Date Functions:
+century,decade,quarter, millennium, date_part(part, time)
+
+** Aggregates Function **
+Approximate Aggregates:
+favg(arg), fsum(arg),geomean(arg), histogram(arg),
+product(arg), approx_count_distinct(x)
+
+Statistical Aggregates:
+kurtosis(x), mad(x), median(x),mode(x),
+quantile_cont(x, pos), skewness(x)
+
+GROUPING SETS
+SELECT city, street_name, avg(income)
+FROM addresses
+GROUP BY GROUPING SETS ((city, street_name), (city), (street_name), ())
